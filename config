@@ -40,7 +40,7 @@ MODULE_DIRTREE="modules/system_root/"
 THREADS="$(grep -c ^processor /proc/cpuinfo)"
 
 # Image Type (Only ONE of the following (lz4/gz) can be enabled!)
- GZ Image (Uncomment to Enable)
+GZ Image 
 IMAGE_NAME=Image.gz-dtb
 # lz4 image (Uncomment to Enable)
 ### IMAGE_NAME=Image.lz4-dtb
