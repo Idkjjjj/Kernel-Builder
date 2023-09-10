@@ -20,7 +20,7 @@ export CC=clang
 CCACHE=true
 
 # Kernel local name
-export LOCALVERSION=-NetHunter
+export LOCALVERSION=-RTkernel
 
 ##############################################
 # Environment
@@ -30,7 +30,7 @@ export LOCALVERSION=-NetHunter
 KDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." >/dev/null 2>&1 && pwd )"
 
 # build config
-CONFIG=nethunter_defconfig
+CONFIG=vil_defconfig
 
 # Directory structure on the target device that will contain the modules directory
 MODULE_DIRTREE="modules/system_root/"
@@ -40,19 +40,19 @@ MODULE_DIRTREE="modules/system_root/"
 THREADS="$(grep -c ^processor /proc/cpuinfo)"
 
 # Image Type (Only ONE of the following (lz4/gz) can be enabled!)
-# GZ Image (Uncomment to Enable)
+ GZ Image (Uncomment to Enable)
 IMAGE_NAME=Image.gz-dtb
 # lz4 image (Uncomment to Enable)
 ### IMAGE_NAME=Image.lz4-dtb
 
 # Set to "true" to enable dtbo
-DO_DTBO=false
+DO_DTBO=true
 
 # Path to compiled dtbo image
 DTBO_IMAGE=$BUILD_DIR/out/arch/arm64/boot/dtbo.img
 
 # Set to "true" to enable dtb
-DO_DTB=false
+DO_DTB=true
 
 # DTB Version
 DTB_VER=2
