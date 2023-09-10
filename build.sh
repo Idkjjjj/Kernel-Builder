@@ -113,7 +113,7 @@ function get_toolchain() {
             if [ ${TOOLCHAIN_SRC_TYPE} == "wget" ]; then
                 info "Downloading ${TOOLCHAIN_NAME}"
 
-                wget ${TOOLCHAIN_SRC} --quiet --show-progress -O ${ARCH_DIR}/${file_name}
+                wget ${https://snapshots.linaro.org/gnu-toolchain/14.0-2023.06-1/aarch64-linux-gnu/gcc-linaro-14.0.0-2023.06-x86_64_aarch64-linux-gnu.tar.xz} --quiet --show-progress -O ${ARCH_DIR}/${file_name}
 
                 if [ $? -eq 0 ]; then
                     success "Successfully downloaded ${file_name}"
